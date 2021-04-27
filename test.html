@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    span{
+        position: absolute;
+        bottom: 0px;
+        color: white;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    div{
+        width: 400px; 
+        height: 300px;  
+        position: relative;
+        text-align: center;
+        border: 1px solid red;
+        overflow: hidden;;
+    }
+</style>
+</head>
+
+<body>
+    <div>
+        <video height="100%"  loop autoplay muted>
+            <source src="img/video-devices.m4v" type="video/mp4">
+        </video>
+        <span>동영상입니다.</span>
+    </div>
+</body>
+
+</html>

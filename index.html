@@ -10,6 +10,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+        /* PC화면 **********************************************************/
+        .img_pc,
+        .caption_pc,
+        #siteMap,
+        #video-pc {
+            display: block !important;
+        }
+
+        .img_mobile,
+        .caption_mobile,
+        #siteMap_mobile,
+        #video-mobile {
+            display: none !important;
+        }
+
+        /* navbar ************************************************/
         .navbar {
             background-color: #fff;
         }
@@ -17,7 +33,9 @@
         .navbar a {
             color: black !important;
         }
+        /* navbar */
 
+        /* carousel ******************************************************/
         .carousel-caption {
             position: absolute;
             top: 35%;
@@ -33,16 +51,8 @@
             font-size: 0.8vw;
         }
 
-        .img_pc,
-        .caption_pc,
-        #siteMap {
-            display: block !important;
-        }
-
-        .img_mobile,
-        .caption_mobile,
-        #siteMap_mobile {
-            display: none !important;
+        #video-pc, #video-mobile{
+            width: 100%;
         }
 
         .carousel-indicators li {
@@ -80,6 +90,12 @@
             color: black;
         }
 
+        .carousel-indicators {
+            width: 100%;
+            margin: 0 !important;
+            left: 0 !important;
+            margin-bottom: 20px !important;
+        }
 
         @keyframes movbar {
             from {
@@ -96,13 +112,17 @@
             height: 10px;
             background-color: rgba(0, 0, 0, 0);
         }
+        /* carousel */
 
+        /* 고객지원 ***************************************************/
         .col-sm-3 img {
             width: 100%;
             height: 100%;
             margin-top: 25px;
         }
+        /* 고객지원 */
 
+        /* SiteMap *************************************************************/
         #siteMap {
             height: 70%;
             margin: 25px 0;
@@ -119,10 +139,6 @@
             height: 400px;
         }
 
-        .img_pc {
-            margin: auto;
-        }
-
         #siteMap h3 {
             font-weight: bold;
             font-size: 20px;
@@ -133,20 +149,20 @@
             padding-bottom: 10px;
         }
 
+        /* 해상도 992이하 SiteMap 전용 ************************************/
         @media screen and (max-width:992px) {
             .border-right {
                 height: 500px;
             }
         }
+        /* 해상도 992이하 SiteMap 전용 */
+        /* SiteMap */
+        /* PC 화면 */
 
+        /* 모바일 화면 ******************************************************/
         @media screen and (max-width:768px) {
 
-            /* .carousel-indicators .active {
-                width: 30px;
-                height: 10px;
-                background-color: rgba(0, 0, 0, 0);
-            } */
-
+            /* carousel Mobile *****************************************************/
             .carousel-indicators span {
                 display: none;
             }
@@ -176,34 +192,8 @@
 
             .carousel-indicators .active {
                 width: 8vw;
-                /* height: 3px; */
                 background-color: rgba(0, 0, 0, 0);
                 margin: 0 2vw;
-            }
-
-
-            .img_pc,
-            .caption_pc,
-            #siteMap {
-                display: none !important;
-            }
-
-            .img_mobile,
-            .caption_mobile,
-            #siteMap_mobile {
-                display: block !important;
-            }
-
-            .img_mobile {
-                margin: 0 auto;
-            }
-
-            .caption_mobile {
-                margin-top: 20%;
-            }
-
-            .caption_mobile p {
-                font-size: 4vw;
             }
 
             .carousel-caption {
@@ -217,10 +207,37 @@
                 font-size: 9vw;
             }
 
+            .caption_mobile {
+                margin-top: 20%;
+            }
+
+            .caption_mobile p {
+                font-size: 4vw;
+            }
+            /* carousel Mobile */
+
+            .img_pc,
+            .caption_pc,
+            #siteMap,
+            #video-pc {
+                display: none !important;
+            }
+
+            .img_mobile,
+            .caption_mobile,
+            #siteMap_mobile,
+            #video-mobile {
+                display: block !important;
+            }
+
+            .img_mobile {
+                margin: 0 auto;
+            }
+
             .col-sm-3 img {
                 box-sizing: border-box;
             }
-
+            /* SiteMap Mobile *******************************************/
             #siteMap_mobile {
                 margin-top: 30px;
                 color: black;
@@ -263,7 +280,6 @@
                 width: 100%;
                 font-size: 25px;
                 text-align: left;
-                /* border: 2px solid black; */
                 margin: 0;
             }
 
@@ -281,8 +297,9 @@
                 font-size: 13px;
                 margin: 20px 0 20px 10px;
             }
-
+            /* SiteMap Mobile */
         }
+        /* 모바일 화면 */
     </style>
 </head>
 
@@ -315,15 +332,19 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"><span>Galaxy S21 5G</span>
+            <li data-target="#myCarousel" data-slide-to="0" class="active"><span>새로운 Galaxy</span>
                 <div></div>
                 <div class="anibar"></div>
             </li>
-            <li data-target="#myCarousel" data-slide-to="1" class="colorBlack"><span>BESPOKE 제트</span>
+            <li data-target="#myCarousel" data-slide-to="1"><span>Galaxy S21 5G</span>
                 <div></div>
                 <div class="anibar"></div>
             </li>
-            <li data-target="#myCarousel" data-slide-to="2" class="colorBlack"><span>BESPOKE 냉장고</span>
+            <li data-target="#myCarousel" data-slide-to="2" class="colorBlack"><span>BESPOKE 제트</span>
+                <div></div>
+                <div class="anibar"></div>
+            </li>
+            <li data-target="#myCarousel" data-slide-to="3" class="colorBlack"><span>BESPOKE 냉장고</span>
                 <div></div>
                 <div class="anibar"></div>
             </li>
@@ -332,6 +353,31 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
+                <!-- <div id="vedio-caption"> -->
+                    <video id="video-pc" muted loop autoplay>
+                        <source src="img/vedio01_pc.webm" type="video/mp4">
+                    </video>
+                    <video id="video-mobile" muted loop autoplay>
+                        <source src="img/vedio01_mobile.webm" type="video/mp4">
+                    </video>
+                <!-- </div> -->
+                <div class="carousel-caption caption_pc">
+                    <h3>새로운 Galaxy
+                        <br>
+                        사전판매 알림신청
+                    </h3>
+                    <p>알림 신청 후 구매 시 네이버페이 포인트 더블 적립!</p>
+                </div>
+                <div class="carousel-caption caption_mobile">
+                    <h3>새로운 Galaxy
+                        <br>
+                        사전판매 알림신청
+                    </h3>
+                    <p>알림 신청 후 구매 시<br>네이버페이 포인트 더블 적립!</p>
+                </div>
+            </div>
+
+            <div class="item">
                 <img class="img_pc" src="img/img01_pc.webp" alt="갤럭시S 21">
                 <img class="img_mobile" src="img/img01_mobile.webp" alt="갤럭시S 21">
                 <div class="carousel-caption caption_pc">
@@ -439,7 +485,7 @@
     <!-- 고객지원 -->
 
     <!-- 게시판 -------------------------------------------------------------->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         // iframe resize
         function autoResize(i) {
             (i).height = 0;
@@ -453,7 +499,7 @@
         <h3 class="text-center">BOARD</h3>
         <iframe id="iframe1" src="http://nig.dothome.co.kr/g5/bbs/board.php?bo_table=board01" width="100%"
             onload="autoResize(this)" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-    </div>
+    </div> -->
     <!-- 게시판 -->
 
     <!-- Site Map ------------------------------------------------------->
